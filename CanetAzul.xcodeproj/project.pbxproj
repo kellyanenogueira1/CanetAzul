@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B33537624E4332E00D0C522 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B33537524E4332E00D0C522 /* AppDelegate.swift */; };
+		0B33537824E4332E00D0C522 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B33537724E4332E00D0C522 /* SceneDelegate.swift */; };
+		0B33537F24E4332F00D0C522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B33537E24E4332F00D0C522 /* Assets.xcassets */; };
+		0B33538D24E4332F00D0C522 /* CanetAzulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B33538C24E4332F00D0C522 /* CanetAzulTests.swift */; };
+		0B33539824E4332F00D0C522 /* CanetAzulUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B33539724E4332F00D0C522 /* CanetAzulUITests.swift */; };
+		0B3353A624E4737D00D0C522 /* Criar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3353A524E4737D00D0C522 /* Criar.storyboard */; };
+		0B3353A924E474AE00D0C522 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3353A824E474AE00D0C522 /* TabBar.storyboard */; };
+		0B3353AB24E4754400D0C522 /* Inspirese.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3353AA24E4754400D0C522 /* Inspirese.storyboard */; };
+		0B3353AD24E4755D00D0C522 /* Perfil.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3353AC24E4755D00D0C522 /* Perfil.storyboard */; };
+		0B3353AF24E4784400D0C522 /* Meustextos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3353AE24E4784400D0C522 /* Meustextos.storyboard */; };
+		0B3353B224E4882800D0C522 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3353B024E4882800D0C522 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B33538924E4332F00D0C522 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B33536A24E4332E00D0C522 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B33537124E4332E00D0C522;
+			remoteInfo = CanetAzul;
+		};
+		0B33539424E4332F00D0C522 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B33536A24E4332E00D0C522 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B33537124E4332E00D0C522;
+			remoteInfo = CanetAzul;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B33537224E4332E00D0C522 /* CanetAzul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CanetAzul.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B33537524E4332E00D0C522 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0B33537724E4332E00D0C522 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0B33537E24E4332F00D0C522 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B33538824E4332F00D0C522 /* CanetAzulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanetAzulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B33538C24E4332F00D0C522 /* CanetAzulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanetAzulTests.swift; sourceTree = "<group>"; };
+		0B33538E24E4332F00D0C522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B33539324E4332F00D0C522 /* CanetAzulUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanetAzulUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B33539724E4332F00D0C522 /* CanetAzulUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanetAzulUITests.swift; sourceTree = "<group>"; };
+		0B33539924E4332F00D0C522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B3353A524E4737D00D0C522 /* Criar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Criar.storyboard; sourceTree = "<group>"; };
+		0B3353A824E474AE00D0C522 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		0B3353AA24E4754400D0C522 /* Inspirese.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Inspirese.storyboard; sourceTree = "<group>"; };
+		0B3353AC24E4755D00D0C522 /* Perfil.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Perfil.storyboard; sourceTree = "<group>"; };
+		0B3353AE24E4784400D0C522 /* Meustextos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Meustextos.storyboard; sourceTree = "<group>"; };
+		0B3353B124E4882800D0C522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CanetAzul/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
+		0B3353B424E48A0300D0C522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0B33536F24E4332E00D0C522 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B33538524E4332F00D0C522 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B33539024E4332F00D0C522 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B33536924E4332E00D0C522 = {
+			isa = PBXGroup;
+			children = (
+				0B33537424E4332E00D0C522 /* CanetAzul */,
+				0B3353B424E48A0300D0C522 /* Info.plist */,
+				0B33538B24E4332F00D0C522 /* CanetAzulTests */,
+				0B33539624E4332F00D0C522 /* CanetAzulUITests */,
+				0B33537324E4332E00D0C522 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0B33537324E4332E00D0C522 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B33537224E4332E00D0C522 /* CanetAzul.app */,
+				0B33538824E4332F00D0C522 /* CanetAzulTests.xctest */,
+				0B33539324E4332F00D0C522 /* CanetAzulUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B33537424E4332E00D0C522 /* CanetAzul */ = {
+			isa = PBXGroup;
+			children = (
+				0B33537524E4332E00D0C522 /* AppDelegate.swift */,
+				0B33537724E4332E00D0C522 /* SceneDelegate.swift */,
+				0B3353A724E473D500D0C522 /* View */,
+			);
+			path = CanetAzul;
+			sourceTree = "<group>";
+		};
+		0B33538B24E4332F00D0C522 /* CanetAzulTests */ = {
+			isa = PBXGroup;
+			children = (
+				0B33538C24E4332F00D0C522 /* CanetAzulTests.swift */,
+				0B33538E24E4332F00D0C522 /* Info.plist */,
+			);
+			path = CanetAzulTests;
+			sourceTree = "<group>";
+		};
+		0B33539624E4332F00D0C522 /* CanetAzulUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0B33539724E4332F00D0C522 /* CanetAzulUITests.swift */,
+				0B33539924E4332F00D0C522 /* Info.plist */,
+			);
+			path = CanetAzulUITests;
+			sourceTree = "<group>";
+		};
+		0B3353A724E473D500D0C522 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0B3353A824E474AE00D0C522 /* TabBar.storyboard */,
+				0B3353AE24E4784400D0C522 /* Meustextos.storyboard */,
+				0B3353A524E4737D00D0C522 /* Criar.storyboard */,
+				0B3353AC24E4755D00D0C522 /* Perfil.storyboard */,
+				0B3353B024E4882800D0C522 /* LaunchScreen.storyboard */,
+				0B3353AA24E4754400D0C522 /* Inspirese.storyboard */,
+				0B33537E24E4332F00D0C522 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0B33537124E4332E00D0C522 /* CanetAzul */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B33539C24E4332F00D0C522 /* Build configuration list for PBXNativeTarget "CanetAzul" */;
+			buildPhases = (
+				0B33536E24E4332E00D0C522 /* Sources */,
+				0B33536F24E4332E00D0C522 /* Frameworks */,
+				0B33537024E4332E00D0C522 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CanetAzul;
+			productName = CanetAzul;
+			productReference = 0B33537224E4332E00D0C522 /* CanetAzul.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0B33538724E4332F00D0C522 /* CanetAzulTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B33539F24E4332F00D0C522 /* Build configuration list for PBXNativeTarget "CanetAzulTests" */;
+			buildPhases = (
+				0B33538424E4332F00D0C522 /* Sources */,
+				0B33538524E4332F00D0C522 /* Frameworks */,
+				0B33538624E4332F00D0C522 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B33538A24E4332F00D0C522 /* PBXTargetDependency */,
+			);
+			name = CanetAzulTests;
+			productName = CanetAzulTests;
+			productReference = 0B33538824E4332F00D0C522 /* CanetAzulTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0B33539224E4332F00D0C522 /* CanetAzulUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B3353A224E4332F00D0C522 /* Build configuration list for PBXNativeTarget "CanetAzulUITests" */;
+			buildPhases = (
+				0B33538F24E4332F00D0C522 /* Sources */,
+				0B33539024E4332F00D0C522 /* Frameworks */,
+				0B33539124E4332F00D0C522 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0B33539524E4332F00D0C522 /* PBXTargetDependency */,
+			);
+			name = CanetAzulUITests;
+			productName = CanetAzulUITests;
+			productReference = 0B33539324E4332F00D0C522 /* CanetAzulUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0B33536A24E4332E00D0C522 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Kellyane Nogueira";
+				TargetAttributes = {
+					0B33537124E4332E00D0C522 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					0B33538724E4332F00D0C522 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 0B33537124E4332E00D0C522;
+					};
+					0B33539224E4332F00D0C522 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 0B33537124E4332E00D0C522;
+					};
+				};
+			};
+			buildConfigurationList = 0B33536D24E4332E00D0C522 /* Build configuration list for PBXProject "CanetAzul" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0B33536924E4332E00D0C522;
+			productRefGroup = 0B33537324E4332E00D0C522 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B33537124E4332E00D0C522 /* CanetAzul */,
+				0B33538724E4332F00D0C522 /* CanetAzulTests */,
+				0B33539224E4332F00D0C522 /* CanetAzulUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0B33537024E4332E00D0C522 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B3353A924E474AE00D0C522 /* TabBar.storyboard in Resources */,
+				0B33537F24E4332F00D0C522 /* Assets.xcassets in Resources */,
+				0B3353AB24E4754400D0C522 /* Inspirese.storyboard in Resources */,
+				0B3353AF24E4784400D0C522 /* Meustextos.storyboard in Resources */,
+				0B3353B224E4882800D0C522 /* LaunchScreen.storyboard in Resources */,
+				0B3353AD24E4755D00D0C522 /* Perfil.storyboard in Resources */,
+				0B3353A624E4737D00D0C522 /* Criar.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B33538624E4332F00D0C522 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B33539124E4332F00D0C522 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0B33536E24E4332E00D0C522 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B33537624E4332E00D0C522 /* AppDelegate.swift in Sources */,
+				0B33537824E4332E00D0C522 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B33538424E4332F00D0C522 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B33538D24E4332F00D0C522 /* CanetAzulTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B33538F24E4332F00D0C522 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B33539824E4332F00D0C522 /* CanetAzulUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B33538A24E4332F00D0C522 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B33537124E4332E00D0C522 /* CanetAzul */;
+			targetProxy = 0B33538924E4332F00D0C522 /* PBXContainerItemProxy */;
+		};
+		0B33539524E4332F00D0C522 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0B33537124E4332E00D0C522 /* CanetAzul */;
+			targetProxy = 0B33539424E4332F00D0C522 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0B3353B024E4882800D0C522 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B3353B124E4882800D0C522 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0B33539A24E4332F00D0C522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0B33539B24E4332F00D0C522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B33539D24E4332F00D0C522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kellyanenogueira.CanetAzul;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0B33539E24E4332F00D0C522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.kellyanenogueira.CanetAzul;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0B3353A024E4332F00D0C522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JCC32S9S9V;
+				INFOPLIST_FILE = CanetAzulTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = developeracademy.CanetAzulTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CanetAzul.app/CanetAzul";
+			};
+			name = Debug;
+		};
+		0B3353A124E4332F00D0C522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JCC32S9S9V;
+				INFOPLIST_FILE = CanetAzulTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = developeracademy.CanetAzulTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CanetAzul.app/CanetAzul";
+			};
+			name = Release;
+		};
+		0B3353A324E4332F00D0C522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JCC32S9S9V;
+				INFOPLIST_FILE = CanetAzulUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = developeracademy.CanetAzulUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CanetAzul;
+			};
+			name = Debug;
+		};
+		0B3353A424E4332F00D0C522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JCC32S9S9V;
+				INFOPLIST_FILE = CanetAzulUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = developeracademy.CanetAzulUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CanetAzul;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B33536D24E4332E00D0C522 /* Build configuration list for PBXProject "CanetAzul" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B33539A24E4332F00D0C522 /* Debug */,
+				0B33539B24E4332F00D0C522 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B33539C24E4332F00D0C522 /* Build configuration list for PBXNativeTarget "CanetAzul" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B33539D24E4332F00D0C522 /* Debug */,
+				0B33539E24E4332F00D0C522 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B33539F24E4332F00D0C522 /* Build configuration list for PBXNativeTarget "CanetAzulTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B3353A024E4332F00D0C522 /* Debug */,
+				0B3353A124E4332F00D0C522 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B3353A224E4332F00D0C522 /* Build configuration list for PBXNativeTarget "CanetAzulUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B3353A324E4332F00D0C522 /* Debug */,
+				0B3353A424E4332F00D0C522 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0B33536A24E4332E00D0C522 /* Project object */;
+}
