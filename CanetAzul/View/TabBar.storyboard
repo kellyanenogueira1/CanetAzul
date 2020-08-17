@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IR0-BW-WHN">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,6 +14,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.99934154750000004" green="0.84353953599999998" blue="0.037655930970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="jTH-9B-5TG" kind="relationship" relationship="viewControllers" id="BQV-vL-6GK"/>
@@ -24,20 +25,20 @@
             </objects>
             <point key="canvasLocation" x="-774" y="-203"/>
         </scene>
-        <!--Meustextos-->
+        <!--Mytexts-->
         <scene sceneID="eNj-N6-uFH">
             <objects>
-                <viewControllerPlaceholder storyboardName="Meustextos" id="jTH-9B-5TG" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Mytexts" id="jTH-9B-5TG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vK8-wH-1XB"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P14-er-enZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1120" y="220"/>
         </scene>
-        <!--Inspirese-->
+        <!--Dictionary-->
         <scene sceneID="8Ou-nl-WUZ">
             <objects>
-                <viewControllerPlaceholder storyboardName="Inspirese" id="Uix-hj-J5p" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Dictionary" id="Uix-hj-J5p" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="TxW-8o-hgR"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OdU-50-aN1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -45,4 +46,5 @@
             <point key="canvasLocation" x="-451" y="220"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.99934154750000004" green="0.84353953599999998" blue="0.037655930970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
 </document>
