@@ -11,6 +11,19 @@ import UIKit
 
 //Este arquivo é responsável por configurar a Xib
 class PreviewTableView: UITableViewCell{
+    static let nibname = "PreviewTableViewCell"
+    static let identifier = "previewText"
+    
+    override func prepareForReuse() {
+       // labelTitle.text = ""
+        //contentTextView.text = ""
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        //applyShadow()
+        self.selectionStyle = .none
+    }
     
 //    func applyShadow() {
 //        //Deixando o shadow passar das fronteiras da mascara da layer da contentView da celula

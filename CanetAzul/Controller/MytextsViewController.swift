@@ -18,14 +18,45 @@ class MytextsViewController: UIViewController{
 //    var preview: String
 //    var creationDate: Date
 //
-//
-//    init(title:String, preview: String, creationDate: Date ){
-//        self.titleText = title
-//        self.preview = preview
-//        self.creationDate = creationDate
-//    }
-//
+
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
+//        title = "Como Doar"
+//        configureTable()
+//        tableView.backgroundColor = UIColor.init(named: "Bege")
+//
+//        // Do any additional setup after loading the view.
 //    }
+//
+//    private func configureTable(){
+//        let tableCellNib = UINib(nibName: ContentTableViewCell.nibname, bundle: nil)
+//        tableView.register(tableCellNib, forCellReuseIdentifier: ContentTableViewCell.identifier)
+//    }
+//
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using segue.destination.
+//        // Pass the selected object to the new view controller.
+//    }
+//
+//}
+//extension ComoDoarViewController: UITableViewDataSource, UITableViewDelegate{
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+//        return titles.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+//        guard let cell = tableView.dequeueReusableCell(withIdentifier: ContentTableViewCell.identifier, for: indexPath) as? ContentTableViewCell else{
+//            fatalError("Wrong identifier")
+//        }
+//
+//        cell.labelTitle.text = titles[indexPath.row]
+//        cell.contentTextView.text = contents[indexPath.row]
+//        cell.imageView?.image = UIImage(named: titles[indexPath.row])
+//
+//        cell.backgroundColor = UIColor.clear
+//        return cell
+//    }
+//    //IndexPath - Qual a seção e qual é a célula
 }

@@ -24,23 +24,14 @@ class DictionaryViewController:UIViewController{
             DispatchQueue.main.async {
                 //atualizar dados aqui
                 self.addTextInView()
-                
                 self.textViewDictionary.reloadInputViews()
             }
         }
     }
     
-    //1. Iterar listOfSynonyms.synonyms
-    //2. Add no text view (appendar)
-    //3.Limpar view
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-//        let teste = SearchRequest(word: "lovely")
-//        teste.getSynonyms { (search) in
-//            print(search)
-//        }
     }
     
     func addTextInView(){
@@ -70,3 +61,8 @@ extension DictionaryViewController: UISearchBarDelegate {
         }
     }
 }
+// Chamada de função-requisição
+//        let teste = SearchRequest(word: "lovely")
+//        teste.getSynonyms { (search) in
+//            print(search)
+//        }
