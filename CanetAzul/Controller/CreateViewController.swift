@@ -21,6 +21,8 @@ class CreateViewController: UIViewController, UITextViewDelegate {
         viewSettings()
         titleSettings()
         textSettings()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
     }
     
@@ -49,10 +51,11 @@ class CreateViewController: UIViewController, UITextViewDelegate {
         NSLayoutConstraint.activate([
             textView.leadingAnchor.constraint(equalTo: imageView.leadingAnchor, constant: 20),
             textView.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -20),
-            textView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -20),
+            textView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -10),
             textView.topAnchor.constraint(equalTo: titleField.bottomAnchor, constant: 10)
         ])
-        textView.addBarToKeyboard(myAction: #selector(self.textView.resignFirstResponder))
+        //textView.addBarToKeyboard(myAction: #selector(self.textView.resignFirstResponder))
+        textView.addBarToKeyboard()
     }
     
     func titleSettings(){
@@ -70,34 +73,23 @@ class CreateViewController: UIViewController, UITextViewDelegate {
             titleField.leadingAnchor.constraint(equalTo: self.imageView.leadingAnchor, constant: 20),
             titleField.trailingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: -20)
         ])
+        // titleField.attributedPlaceholder = NSAttributedString(string: "placeholder text", attributes: [NSAttributedString.Key.foregroundColor: UIColor.yellow])
     }
     
-   // titleField.attributedPlaceholder = NSAttributedString(string: "placeholder text", attributes: [NSAttributedString.Key.foregroundColor: UIColor.yellow])
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.resignFirstResponder()
+      }
     
-    func changeTextColor(_ color: UIColor){
-        
+    @objc func keyboardWillShow(notification: NSNotification){
+        let keyboardSize = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        self.textView.contentInset.bottom = keyboardSize.height
+        self.textView.scrollIndicatorInsets = self.textView.contentInset;
     }
     
-    func changeTitleColor(_ color: UIColor){
-        
+    @objc func keyboardWillHide(notification: NSNotification){
+        self.textView.contentInset = .zero
+        self.textView.scrollIndicatorInsets = .zero
     }
     
 }
 
-extension UITextView{
-    func addBarToKeyboard(myAction:Selector?){
-        let Toolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 300, height: 40))
-        Toolbar.isTranslucent = true// = UIBarStyle.blackTranslucent
-        
-        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        let close = UIBarButtonItem(title: "Close", style: .done, target: self, action: myAction)
-        var items = [UIBarButtonItem]()
-        items.append(flexSpace)
-        items.append(close)
-        
-        Toolbar.items = items
-        Toolbar.sizeToFit()
-        
-        self.inputAccessoryView = Toolbar
-    }
-}

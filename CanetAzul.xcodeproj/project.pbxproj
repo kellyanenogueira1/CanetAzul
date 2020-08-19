@@ -18,6 +18,7 @@
 		0B3353AD24E4755D00D0C522 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3353AC24E4755D00D0C522 /* Profile.storyboard */; };
 		0B3353AF24E4784400D0C522 /* Mytexts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3353AE24E4784400D0C522 /* Mytexts.storyboard */; };
 		0B3353B224E4882800D0C522 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3353B024E4882800D0C522 /* LaunchScreen.storyboard */; };
+		0B5A06D924ED77F7004822D8 /* InputAcessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A06D724ED6A83004822D8 /* InputAcessoryView.swift */; };
 		0B5D861224E6C2B000F1499D /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D861124E6C2B000F1499D /* DictionaryViewController.swift */; };
 		0B5D861424E6C2DE00F1499D /* MytextsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D861324E6C2DE00F1499D /* MytextsViewController.swift */; };
 		0B5D861624E6C30A00F1499D /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D861524E6C30A00F1499D /* CreateViewController.swift */; };
@@ -62,6 +63,8 @@
 		0B3353AE24E4784400D0C522 /* Mytexts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mytexts.storyboard; sourceTree = "<group>"; };
 		0B3353B124E4882800D0C522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = CanetAzul/Base.lproj/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		0B3353B424E48A0300D0C522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		0B5A06D624ED65D7004822D8 /* CanetAzul.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CanetAzul.entitlements; sourceTree = "<group>"; };
+		0B5A06D724ED6A83004822D8 /* InputAcessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAcessoryView.swift; sourceTree = "<group>"; };
 		0B5D861124E6C2B000F1499D /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		0B5D861324E6C2DE00F1499D /* MytextsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MytextsViewController.swift; sourceTree = "<group>"; };
 		0B5D861524E6C30A00F1499D /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +123,7 @@
 		0B33537424E4332E00D0C522 /* CanetAzul */ = {
 			isa = PBXGroup;
 			children = (
+				0B5A06D624ED65D7004822D8 /* CanetAzul.entitlements */,
 				0B33537524E4332E00D0C522 /* AppDelegate.swift */,
 				0B33537724E4332E00D0C522 /* SceneDelegate.swift */,
 				0B3353A724E473D500D0C522 /* View */,
@@ -169,6 +173,7 @@
 				0B5D861124E6C2B000F1499D /* DictionaryViewController.swift */,
 				0B5D861324E6C2DE00F1499D /* MytextsViewController.swift */,
 				0B5D861524E6C30A00F1499D /* CreateViewController.swift */,
+				0B5A06D724ED6A83004822D8 /* InputAcessoryView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B5A06D924ED77F7004822D8 /* InputAcessoryView.swift in Sources */,
 				0B5D861624E6C30A00F1499D /* CreateViewController.swift in Sources */,
 				0B5D861B24E6D27F00F1499D /* Search.swift in Sources */,
 				0B5D861224E6C2B000F1499D /* DictionaryViewController.swift in Sources */,
@@ -490,8 +496,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CanetAzul/CanetAzul.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JCC32S9S9V;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -508,8 +515,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CanetAzul/CanetAzul.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JCC32S9S9V;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
