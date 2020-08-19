@@ -10,13 +10,14 @@ import Foundation
 import UIKit
 
 //Este arquivo é responsável por enviar os dados de organização dos elementos na view para a storyboard e receber os dados de texto criando um documento e salvando em formato .json
-class CreateViewController: UIViewController{
+class CreateViewController: UIViewController, UITextViewDelegate {
     var imageView = UIImageView()
     var textView = UITextView()
     var titleField = UITextField()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textView.delegate = self
         viewSettings()
         titleSettings()
         textSettings()
@@ -38,13 +39,12 @@ class CreateViewController: UIViewController{
     
     func textSettings(){
         self.view.addSubview(textView)
-        //textView.textColor = .yellow
-        textView.becomeFirstResponder()
+        //textView.enablesReturnKeyAutomatically = true //becomeFirstResponder()
+        textView.keyboardType = .default
+        textView.keyboardAppearance = .dark
         textView.isEditable = true
         textView.isScrollEnabled = true
-        //textView.keyboardDismissMode = .interactive
         textView.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.light)
-        textView.text = "alguma coisa"
         textView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             textView.leadingAnchor.constraint(equalTo: imageView.leadingAnchor, constant: 20),
@@ -52,12 +52,15 @@ class CreateViewController: UIViewController{
             textView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -20),
             textView.topAnchor.constraint(equalTo: titleField.bottomAnchor, constant: 10)
         ])
+        textView.addBarToKeyboard(myAction: #selector(self.textView.resignFirstResponder))
     }
     
     func titleSettings(){
         self.view.addSubview(titleField)
         titleField.placeholder = "Title"
         titleField.textAlignment = .center
+        titleField.keyboardType = .default
+        titleField.keyboardAppearance = .dark
         titleField.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold)
         titleField.backgroundColor = .white
         titleField.translatesAutoresizingMaskIntoConstraints = false
@@ -70,4 +73,31 @@ class CreateViewController: UIViewController{
     }
     
    // titleField.attributedPlaceholder = NSAttributedString(string: "placeholder text", attributes: [NSAttributedString.Key.foregroundColor: UIColor.yellow])
+    
+    func changeTextColor(_ color: UIColor){
+        
+    }
+    
+    func changeTitleColor(_ color: UIColor){
+        
+    }
+    
+}
+
+extension UITextView{
+    func addBarToKeyboard(myAction:Selector?){
+        let Toolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 300, height: 40))
+        Toolbar.isTranslucent = true// = UIBarStyle.blackTranslucent
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let close = UIBarButtonItem(title: "Close", style: .done, target: self, action: myAction)
+        var items = [UIBarButtonItem]()
+        items.append(flexSpace)
+        items.append(close)
+        
+        Toolbar.items = items
+        Toolbar.sizeToFit()
+        
+        self.inputAccessoryView = Toolbar
+    }
 }
