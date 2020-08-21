@@ -12,8 +12,25 @@ import UIKit
 //Este arquivo é responsável por enviar os dados de organização dos elementos na view para a storyboard e receber os dados de texto criando um documento e salvando em formato .json
 class CreateViewController: UIViewController, UITextViewDelegate {
     var imageView = UIImageView()
-    var textView = UITextView()
-    var titleField = UITextField()
+    var textView: UITextView = {
+        let textView = UITextView()
+        textView.keyboardType = .default
+        textView.keyboardAppearance = .dark
+        textView.isEditable = true
+        textView.isScrollEnabled = true
+        textView.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.light)
+        return textView
+    }()
+    var titleField: UITextField = {
+        let titleField = UITextField()
+        titleField.placeholder = "Title"
+        titleField.textAlignment = .center
+        titleField.keyboardType = .default
+        titleField.keyboardAppearance = .dark
+        titleField.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold)
+        titleField.backgroundColor = .white
+        return titleField
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +38,18 @@ class CreateViewController: UIViewController, UITextViewDelegate {
         viewSettings()
         titleSettings()
         textSettings()
+        
+         //let text = Text(titleText: titleField.text!, textBody: textView.text)
+        //Storage().createFile(text)
+        //navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style:.plain, target: self, action: #selector(backView))
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-
     }
     
     func viewSettings(){
         self.view.addSubview(imageView)
-        
-        imageView.image = UIImage(named:"teste.jpg")
+        imageView.image = UIImage(named: "teste.jpg")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
@@ -41,12 +61,6 @@ class CreateViewController: UIViewController, UITextViewDelegate {
     
     func textSettings(){
         self.view.addSubview(textView)
-        //textView.enablesReturnKeyAutomatically = true //becomeFirstResponder()
-        textView.keyboardType = .default
-        textView.keyboardAppearance = .dark
-        textView.isEditable = true
-        textView.isScrollEnabled = true
-        textView.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.light)
         textView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             textView.leadingAnchor.constraint(equalTo: imageView.leadingAnchor, constant: 20),
@@ -54,18 +68,11 @@ class CreateViewController: UIViewController, UITextViewDelegate {
             textView.bottomAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -10),
             textView.topAnchor.constraint(equalTo: titleField.bottomAnchor, constant: 10)
         ])
-        //textView.addBarToKeyboard(myAction: #selector(self.textView.resignFirstResponder))
         textView.addBarToKeyboard()
     }
     
     func titleSettings(){
         self.view.addSubview(titleField)
-        titleField.placeholder = "Title"
-        titleField.textAlignment = .center
-        titleField.keyboardType = .default
-        titleField.keyboardAppearance = .dark
-        titleField.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold)
-        titleField.backgroundColor = .white
         titleField.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             titleField.topAnchor.constraint(equalTo: self.imageView.topAnchor, constant: 10),
@@ -73,17 +80,20 @@ class CreateViewController: UIViewController, UITextViewDelegate {
             titleField.leadingAnchor.constraint(equalTo: self.imageView.leadingAnchor, constant: 20),
             titleField.trailingAnchor.constraint(equalTo: self.imageView.trailingAnchor, constant: -20)
         ])
-        // titleField.attributedPlaceholder = NSAttributedString(string: "placeholder text", attributes: [NSAttributedString.Key.foregroundColor: UIColor.yellow])
+        // titleField.attributedPlaceholder = NSAttributedString(string: "placeholder text",
+        //attributes: [NSAttributedString.Key.foregroundColor: UIColor.yellow])
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.resignFirstResponder()
       }
     
-    @objc func keyboardWillShow(notification: NSNotification){
-        let keyboardSize = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+    @objc func keyboardWillShow(notification: NSNotification) {
+        // swiftlint:disable force_cast
+        let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        // swiftlint:enable force_cast
         self.textView.contentInset.bottom = keyboardSize.height
-        self.textView.scrollIndicatorInsets = self.textView.contentInset;
+        self.textView.scrollIndicatorInsets = self.textView.contentInset
     }
     
     @objc func keyboardWillHide(notification: NSNotification){
@@ -91,5 +101,16 @@ class CreateViewController: UIViewController, UITextViewDelegate {
         self.textView.scrollIndicatorInsets = .zero
     }
     
-}
+    @objc func backView() {
+        //Pop-up perguntando se deseja salvar
+        //Se sim, createText()
+        let text = Text(titleText: titleField.text!, textBody: textView.text)
+        Storage().createFile(text)
+    }
+    
+    @objc func createText(){
+       // var textWrite = Text(titleText: titleField.text!, textBody: textView.text)
 
+    }
+    
+}

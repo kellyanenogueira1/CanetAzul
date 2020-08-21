@@ -17,16 +17,17 @@ class MytextsViewController: UIViewController{
 //    var titleText: String
 //    var preview: String
 //    var creationDate: Date
-//
-
-//    override func viewDidLoad() {
+    
+    override func viewDidLoad() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addText))
+        //navigationItem.backBarButtonItem = UIBarButtonItem(title: "Mytexts", style: .plain, target: nil, action: nil)
 //        super.viewDidLoad()
 //        title = "Como Doar"
 //        configureTable()
 //        tableView.backgroundColor = UIColor.init(named: "Bege")
-//
-//        // Do any additional setup after loading the view.
-//    }
+
+        // Do any additional setup after loading the view.
+    }
 //
 //    private func configureTable(){
 //        let tableCellNib = UINib(nibName: ContentTableViewCell.nibname, bundle: nil)
@@ -59,4 +60,8 @@ class MytextsViewController: UIViewController{
 //        return cell
 //    }
 //    //IndexPath - Qual a seção e qual é a célula
+    
+    @objc func addText(){
+        
+    }
 }

@@ -10,7 +10,6 @@ import Foundation
 
 //Estrutura de resposta da Api (Como os dados virão)
 
-struct Search:Codable{
+struct Search: Codable{
     var synonyms: [String]
 }
-

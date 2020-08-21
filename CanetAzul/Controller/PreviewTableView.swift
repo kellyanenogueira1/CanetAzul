@@ -13,7 +13,6 @@ import UIKit
 class PreviewTableView: UITableViewCell{
     static let nibname = "PreviewTableViewCell"
     static let identifier = "previewText"
-    
     override func prepareForReuse() {
        // labelTitle.text = ""
         //contentTextView.text = ""

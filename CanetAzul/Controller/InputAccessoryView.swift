@@ -9,32 +9,29 @@
 import Foundation
 import UIKit
 
-extension UITextView{
+extension UITextView {
    func addBarToKeyboard(){ //myAction:Selector?
-        let Toolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 300, height: 40))
-        Toolbar.isTranslucent = true
+        let toolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 300, height: 40))
+        toolbar.isTranslucent = true
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        //let close = UIBarButtonItem(title: "Close", style: .done, target: self, action: myAction)
-    let close = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(closeToolBar))
-    close.tintColor = .systemYellow
-    close.image = UIImage(systemName: "clear")
+        let close = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(closeToolBar))
+        close.tintColor = .systemYellow
+        close.image = UIImage(systemName: "clear")
     
         var items = [UIBarButtonItem]()
         items.append(flexSpace)
         items.append(close)
         
-        Toolbar.items = items
-        Toolbar.sizeToFit()
+        toolbar.items = items
+        toolbar.sizeToFit()
         
-        self.inputAccessoryView = Toolbar
+        self.inputAccessoryView = toolbar
 
     }
     
     @objc func closeToolBar(){
         self.resignFirstResponder()
     }
-    
 
 }
-

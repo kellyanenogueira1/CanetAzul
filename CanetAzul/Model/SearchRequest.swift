@@ -10,13 +10,13 @@ import Foundation
 
 //Arquivo responsável por fazer a requisição, ou seja, solicitar informações a API
 
-enum SearchError:Error {
+enum SearchError: Error {
     case noDataAvailable
     case canNotProcessData
 }
 
 struct SearchRequest {
-    let urlApi:URL
+    let urlApi: URL
     let headers = [
         "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
         "x-rapidapi-key": "d159ef29cemsh1f46ccd91fa3450p12e15fjsn0e0c7f7b0d77"
@@ -44,7 +44,7 @@ struct SearchRequest {
                 let decoder = JSONDecoder()
                 let search = try decoder.decode(Search.self, from: jsonData)
                 completion(.success(search))
-            }catch{
+            } catch {
                 completion(.failure(.canNotProcessData))
             }
         }
@@ -53,5 +53,3 @@ struct SearchRequest {
     }
     
 }
-
-
