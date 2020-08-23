@@ -9,7 +9,7 @@
 import Foundation
 
 struct Text: Codable{
-    let idText: String
+    var idText: String
     var titleText: String?
     var textBody: String
     var dateCreate: String

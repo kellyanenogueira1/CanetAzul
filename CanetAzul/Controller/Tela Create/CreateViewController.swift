@@ -19,6 +19,7 @@ class CreateViewController: UIViewController, UITextViewDelegate {
         textView.isEditable = true
         textView.isScrollEnabled = true
         textView.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.light)
+        textView.textColor = .blue
         return textView
     }()
     var titleField: UITextField = {
@@ -29,20 +30,20 @@ class CreateViewController: UIViewController, UITextViewDelegate {
         titleField.keyboardAppearance = .dark
         titleField.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold)
         titleField.backgroundColor = .white
+        titleField.textColor = .blue
         return titleField
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.delegate = self
+        self.navigationItem.title = "Create"
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 00, green: 36, blue: 70)
         viewSettings()
         titleSettings()
         textSettings()
-        
-         //let text = Text(titleText: titleField.text!, textBody: textView.text)
-        //Storage().createFile(text)
-        //navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style:.plain, target: self, action: #selector(backView))
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(createText))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backView))
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -101,16 +102,26 @@ class CreateViewController: UIViewController, UITextViewDelegate {
         self.textView.scrollIndicatorInsets = .zero
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
     @objc func backView() {
         //Pop-up perguntando se deseja salvar
         //Se sim, createText()
-        let text = Text(titleText: titleField.text!, textBody: textView.text)
-        Storage().createFile(text)
+        let alert = UIAlertController(title: "Attention", message: "Do you want to leave without saving?", preferredStyle: .alert)
+        let okay = UIAlertAction(title: "Save", style: .default, handler: { action in})
+        alert.addAction(okay)
+        let cancel = UIAlertAction(title: "Delete changes", style: .cancel, handler: { action in})
+        alert.addAction(cancel)
+        DispatchQueue.main.async(execute: {
+            self.present(alert, animated: true)
+        })
+      
     }
     
     @objc func createText(){
-       // var textWrite = Text(titleText: titleField.text!, textBody: textView.text)
-
+        let textWrite = Text(titleText: titleField.text!, textBody: textView.text)
+        Storage().createFile(textWrite)
     }
     
 }

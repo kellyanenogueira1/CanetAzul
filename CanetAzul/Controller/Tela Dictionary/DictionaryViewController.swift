@@ -30,6 +30,8 @@ class DictionaryViewController: UIViewController, UITextViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
+        self.navigationItem.title = "Dictionary"
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 00, green: 36, blue: 70)
     }
     
     func addTextInView() {
