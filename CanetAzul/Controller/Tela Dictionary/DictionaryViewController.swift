@@ -32,10 +32,15 @@ class DictionaryViewController: UIViewController, UITextViewDelegate{
         searchBar.delegate = self
         self.navigationItem.title = "Dictionary"
         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 00, green: 36, blue: 70)
+        textViewDictionary.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold)
+        textViewDictionary.keyboardAppearance = .dark
+        textViewDictionary.keyboardType = .default
     }
     
     func addTextInView() {
+       // var label = UILabel()
         textViewDictionary.text = ""
+        textViewDictionary.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.light)
         textViewDictionary.insertText("Synonyms found:\n")
         for word in listOfSynonyms!.synonyms {
             count += 1

@@ -16,10 +16,10 @@ extension UIView {
     func pin(to superView: UIView){
         translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            leadingAnchor.constraint(equalTo: superView.leadingAnchor),
-            trailingAnchor.constraint(equalTo: superView.trailingAnchor),
-            bottomAnchor.constraint(equalTo: superView.bottomAnchor),
-            topAnchor.constraint(equalTo: superView.bottomAnchor)
+            leadingAnchor.constraint(equalTo: superView.leadingAnchor, constant: 0),
+            trailingAnchor.constraint(equalTo: superView.trailingAnchor, constant: 0),
+            bottomAnchor.constraint(equalTo: superView.bottomAnchor, constant: 0),
+            topAnchor.constraint(equalTo: superView.bottomAnchor, constant: 0)
         ])
     }
     //    var titleText: String
@@ -31,20 +31,6 @@ extension UIView {
 //        //contentTextView.text = ""
 //    }
 //
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        //applyShadow()
-//        self.selectionStyle = .none
-//    }
     
-//    func applyShadow() {
-//        //Deixando o shadow passar das fronteiras da mascara da layer da contentView da celula
-//        self.contentView.layer.masksToBounds = false
-//        
-//        comoDoarImageView.layer.cornerRadius = 12.0
-//        comoDoarImageView.layer.shadowColor = UIColor.black.cgColor
-//        comoDoarImageView.layer.shadowOffset = CGSize(width: 0.0, height: 5.0)
-//        comoDoarImageView.layer.shadowRadius = 8.0
-//        comoDoarImageView.layer.shadowOpacity = 0.2
-//    }
+
 }

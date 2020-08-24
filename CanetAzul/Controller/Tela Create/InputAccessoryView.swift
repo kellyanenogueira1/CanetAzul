@@ -16,7 +16,9 @@ extension UITextView {
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let close = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(closeToolBar))
-        close.tintColor = .systemYellow
+//        let color = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(closeToolBar))
+//        let tipogra = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(closeToolBar))
+        close.tintColor = .systemOrange
         close.image = UIImage(systemName: "clear")
     
         var items = [UIBarButtonItem]()

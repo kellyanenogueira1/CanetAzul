@@ -10,16 +10,15 @@
         <scene sceneID="uWf-JL-i3H">
             <objects>
                 <tabBarController id="IR0-BW-WHN" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UlR-xx-6SZ">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="UlR-xx-6SZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.99934154750000004" green="0.84353953599999998" blue="0.037655930970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.0" green="0.14117647059999999" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.99607843137254903" green="0.68235294117647061" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
-                        <segue destination="jTH-9B-5TG" kind="relationship" relationship="viewControllers" id="BQV-vL-6GK"/>
-                        <segue destination="Uix-hj-J5p" kind="relationship" relationship="viewControllers" id="JGK-a4-rte"/>
-                        <segue destination="v8o-FJ-cXF" kind="relationship" relationship="viewControllers" id="akc-7m-bbm"/>
+                        <segue destination="6OE-fk-GMb" kind="relationship" relationship="viewControllers" id="AbS-on-baE"/>
+                        <segue destination="Uix-hj-J5p" kind="relationship" relationship="viewControllers" id="fDs-Sc-hI5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGg-SL-Fh8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -27,24 +26,15 @@
             <point key="canvasLocation" x="-774" y="-203"/>
         </scene>
         <!--Mytexts-->
-        <scene sceneID="eNj-N6-uFH">
+        <scene sceneID="l5W-oE-rNe">
             <objects>
-                <viewControllerPlaceholder storyboardName="Mytexts" id="jTH-9B-5TG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="vK8-wH-1XB"/>
+                <viewControllerPlaceholder storyboardName="Mytexts" id="6OE-fk-GMb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pzy-0u-ke7"/>
+                    <navigationItem key="navigationItem" id="AO7-GJ-G4P"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P14-er-enZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6MZ-Ke-GW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1120" y="220"/>
-        </scene>
-        <!--Create-->
-        <scene sceneID="Ubo-8w-haO">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Create" id="v8o-FJ-cXF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="1lF-eC-aWV"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8YJ-Pz-hiW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-775" y="233"/>
+            <point key="canvasLocation" x="-1038" y="219"/>
         </scene>
         <!--Dictionary-->
         <scene sceneID="8Ou-nl-WUZ">
@@ -54,8 +44,8 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OdU-50-aN1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-451" y="220"/>
+            <point key="canvasLocation" x="-544" y="219"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.99934154750000004" green="0.84353953599999998" blue="0.037655930970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+    <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dzD-cV-VEO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dHO-rm-jVj">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,7 +10,7 @@
         <!--Create View Controller-->
         <scene sceneID="P3L-UP-LsC">
             <objects>
-                <viewController id="tWP-pT-mpl" customClass="CreateViewController" customModule="CanetAzul" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Create" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tWP-pT-mpl" customClass="CreateViewController" customModule="CanetAzul" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SoC-1O-fuj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,31 +21,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tjn-Pw-GJJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1997.1014492753625" y="78.260869565217391"/>
+            <point key="canvasLocation" x="2904.347826086957" y="78.260869565217391"/>
         </scene>
-        <!--Criar-->
-        <scene sceneID="sbv-rw-Fr7">
+        <!--Navigation Controller-->
+        <scene sceneID="c5u-Ig-AUM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dzD-cV-VEO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Criar" image="trash" catalog="system" selectedImage="trash.fill" id="KBs-vU-T29"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dHO-rm-jVj" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BxH-xI-hHf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dOF-Qv-SIR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="tWP-pT-mpl" kind="relationship" relationship="rootViewController" id="BHu-7B-Tvt"/>
+                        <segue destination="tWP-pT-mpl" kind="relationship" relationship="rootViewController" id="x6j-mZ-Bl6"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i09-r7-KdT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kla-CA-aRq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1089.8550724637682" y="78.260869565217391"/>
+            <point key="canvasLocation" x="1997.1014492753625" y="78.260869565217391"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="trash" catalog="system" width="121" height="128"/>
-        <image name="trash.fill" catalog="system" width="121" height="128"/>
-    </resources>
 </document>

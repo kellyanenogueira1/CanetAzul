@@ -13,6 +13,7 @@ class Storage{
     var filemanager = FileManager.default
     
     init(){
+       //self.driveURL =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         if let containerURL = filemanager.url(forUbiquityContainerIdentifier: nil) {
             let tryURL = containerURL.appendingPathComponent("Documents")
             do {
