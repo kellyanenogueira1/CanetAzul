@@ -9,7 +9,7 @@
 import Foundation
 
 struct Text: Codable{
-    var idText: String
+    var id: String
     var titleText: String?
     var textBody: String
     var dateCreate: String
@@ -22,7 +22,7 @@ struct Text: Codable{
         }
         
         self.textBody = textBody
-        self.idText = UUID().uuidString
+        self.id = UUID().uuidString
         
         let date = Date()
         let format = DateFormatter()

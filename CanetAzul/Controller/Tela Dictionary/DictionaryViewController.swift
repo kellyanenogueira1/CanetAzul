@@ -30,15 +30,29 @@ class DictionaryViewController: UIViewController, UITextViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-        self.navigationItem.title = "Dictionary"
-        self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 00, green: 36, blue: 70)
-        textViewDictionary.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold)
-        textViewDictionary.keyboardAppearance = .dark
-        textViewDictionary.keyboardType = .default
+        configureElements()
+        
+    }
+    
+    func configureElements(){
+        view.backgroundColor = UIColor(red: 0.96, green: 0.79, blue: 0.44, alpha: 1.00)
+         self.navigationItem.title = "Dictionary"
+         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 00, green: 36, blue: 70)
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(red: 0.96, green: 0.79, blue: 0.44, alpha: 1.00)]
+        //searchBar.isTranslucent = true
+        //searchBar.barTintColor = UIColor.orange
+        
+        textViewDictionary.layer.cornerRadius = 8
+         textViewDictionary.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold)
+         textViewDictionary.keyboardAppearance = .dark
+         textViewDictionary.keyboardType = .default
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
     
     func addTextInView() {
-       // var label = UILabel()
         textViewDictionary.text = ""
         textViewDictionary.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.light)
         textViewDictionary.insertText("Synonyms found:\n")
@@ -48,6 +62,7 @@ class DictionaryViewController: UIViewController, UITextViewDelegate{
         }
         count = 0
     }
+
 }
 
 extension DictionaryViewController: UISearchBarDelegate {
@@ -58,12 +73,19 @@ extension DictionaryViewController: UISearchBarDelegate {
         searchRequest.getSynonyms {[weak self] result in
             switch result {
             case .failure(let error):
-                print(error)
+                self?.textViewDictionary.text = ""
+                switch error {
+                case .noDataAvailable:
+                    self?.textViewDictionary.insertText("Sorry, could not find synonyms")
+                default:
+                    self?.textViewDictionary.insertText("The word is incorrect. Please, try again.")
+                }
             case .success(let synonyms):
                 self?.listOfSynonyms = synonyms
             }
         }
     }
+    
 }
 
 // Chamada de função-requisição

@@ -26,10 +26,11 @@ class WelcomeViewController: UIViewController{
     }
     private func configure(){
         //set up view srollview
-        scrollview.frame = holderView.bounds
+        self.scrollview.frame = holderView.bounds
         self.holderView.addSubview(scrollview)
         
-        let titles = ["Welcome", "Text2"]
+        let titles = ["Welcome! Feel free to explore your creativity by writing texts of your own, writing brings us many benefits.", "Need some help? Search for synonyms of a word and make your text more optimized."]
+        
         for index in 1..<3 {
             let pageView = UIView(frame: CGRect(x: CGFloat(index) * holderView.frame.size.width, y: 0, width: holderView.frame.size.width, height: holderView.frame.size.height))
             scrollview.addSubview(pageView)

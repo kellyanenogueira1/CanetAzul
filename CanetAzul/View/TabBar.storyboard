@@ -9,7 +9,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="uWf-JL-i3H">
             <objects>
-                <tabBarController id="IR0-BW-WHN" sceneMemberID="viewController">
+                <tabBarController id="IR0-BW-WHN" customClass="TabBarController" customModule="CanetAzul" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="UlR-xx-6SZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

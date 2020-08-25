@@ -17,13 +17,20 @@ class MytextsViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let onboarding = Onboarding()
+//        onboarding.delegateMytextsToOnboarding = self
+//        navigationController?.pushViewController(onboarding, animated: true)
+        
         configureTableView()
         self.navigationItem.title = "My Texts"
+        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor(red: 0.96, green: 0.79, blue: 0.44, alpha: 1.00)]
+        //let appearance = UINavigationBarAppearance()
         navigationController?.navigationBar.barTintColor = UIColor.init(red: 00, green: 36, blue: 70)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addText))
+        
         navigationItem.rightBarButtonItem?.tintColor = UIColor.init(red: 254, green: 174, blue: 0)
-        //texts = textsData()
+        getAllTexts()
     }
 
     func configureTableView(){
@@ -47,38 +54,52 @@ class MytextsViewController: UIViewController{
     
     @objc func addText(){
         let create = CreateViewController()
+        create.delegateReferenceMyTexts = self //Referência
         navigationController?.pushViewController(create, animated: true)
         //        present(create,animated: true, completion: nil)
     }
     
-    func appendText(text: Text){
-        texts.append(text)
-        tableView.reloadData()
+    func getAllTexts(){
+        if let files = Storage().readAllFiles(){
+            self.texts = files
+        }
     }
 }
 
 extension MytextsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3//texts.count
+        return texts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: PreviewCell.identifier) as! PreviewCell
-        //let text = texts[indexPath.row]
-        var teste = Text(titleText: "My title", textBody: "bmjbvkeaghvalskdjfba;uehfiujhjAHscbkhBVD;ikdjvbkjb;wiurhgsiduvjb;iurbiubdiuebj")
-        cell.isSelected = false
-        //cell.backgroundColor = .clear
-        cell.set(text: teste)
+        let text = texts[indexPath.row] //Chamar aqui o readAllFiles
+        cell.set(text: text)
         return cell
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if let index = self.tableView.indexPathForSelectedRow{
+        tableView.reloadData()
+        if let index = tableView.indexPathForSelectedRow{
             self.tableView.deselectRow(at: index, animated: true) //remover selecão
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAtindexPath: IndexPath) {
+        self.tableView.deselectRow(at: didSelectRowAtindexPath, animated: true) //lembrar de retirar
+        let text = texts[didSelectRowAtindexPath.row]
+        CreateViewController().showText(text.id)
+    }
 
+}
+
+extension MytextsViewController: CreateTextVCDelegate{
+    func textAdd(_ text: Text) {
+        getAllTexts()
+        tableView.reloadData()
+    }
+    
 }
 
 extension UIColor {

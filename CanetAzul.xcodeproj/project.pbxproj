@@ -23,11 +23,11 @@
 		0B5A06D924ED77F7004822D8 /* InputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A06D724ED6A83004822D8 /* InputAccessoryView.swift */; };
 		0B5D861224E6C2B000F1499D /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D861124E6C2B000F1499D /* DictionaryViewController.swift */; };
 		0B5D861424E6C2DE00F1499D /* MytextsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D861324E6C2DE00F1499D /* MytextsViewController.swift */; };
-		0B5D861624E6C30A00F1499D /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D861524E6C30A00F1499D /* CreateViewController.swift */; };
 		0B5D861B24E6D27F00F1499D /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D861A24E6D27F00F1499D /* Search.swift */; };
-		0B7FF50124EB006000306895 /* PreviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7FF50024EB006000306895 /* PreviewTableViewCell.xib */; };
-		0B7FF50324EB0E7000306895 /* PreviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7FF50224EB0E7000306895 /* PreviewTableView.swift */; };
+		0BABDA2C24F2B0BE00FC51BA /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BABDA2B24F2B0BE00FC51BA /* PreviewCell.swift */; };
 		0BE011EC24E728560050A418 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE011EB24E728560050A418 /* SearchRequest.swift */; };
+		0BE1EEBB24F056480083F0C6 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BE1EEBA24F056480083F0C6 /* Welcome.storyboard */; };
+		0BE1EEC024F0A0B70083F0C6 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D861524E6C30A00F1499D /* CreateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,9 +73,12 @@
 		0B5D861324E6C2DE00F1499D /* MytextsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MytextsViewController.swift; sourceTree = "<group>"; };
 		0B5D861524E6C30A00F1499D /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		0B5D861A24E6D27F00F1499D /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
-		0B7FF50024EB006000306895 /* PreviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviewTableViewCell.xib; sourceTree = "<group>"; };
-		0B7FF50224EB0E7000306895 /* PreviewTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTableView.swift; sourceTree = "<group>"; };
+		0BA7EAE524F1791F00FD820A /* Teste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teste.swift; sourceTree = "<group>"; };
+		0BABDA2B24F2B0BE00FC51BA /* PreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
 		0BE011EB24E728560050A418 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
+		0BE1EEB824F053930083F0C6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		0BE1EEBA24F056480083F0C6 /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		0BE1EEBC24F0717B0083F0C6 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,12 +161,12 @@
 		0B3353A724E473D500D0C522 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0B3353B024E4882800D0C522 /* LaunchScreen.storyboard */,
 				0B3353A824E474AE00D0C522 /* TabBar.storyboard */,
+				0BE1EEBA24F056480083F0C6 /* Welcome.storyboard */,
 				0B3353AE24E4784400D0C522 /* Mytexts.storyboard */,
-				0B7FF50024EB006000306895 /* PreviewTableViewCell.xib */,
 				0B3353A524E4737D00D0C522 /* Create.storyboard */,
 				0B3353AA24E4754400D0C522 /* Dictionary.storyboard */,
-				0B3353B024E4882800D0C522 /* LaunchScreen.storyboard */,
 				0B3353AC24E4755D00D0C522 /* Profile.storyboard */,
 				0B33537E24E4332F00D0C522 /* Assets.xcassets */,
 			);
@@ -173,11 +176,10 @@
 		0B5D861724E6C32200F1499D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0B7FF50224EB0E7000306895 /* PreviewTableView.swift */,
-				0B5D861124E6C2B000F1499D /* DictionaryViewController.swift */,
-				0B5D861324E6C2DE00F1499D /* MytextsViewController.swift */,
-				0B5D861524E6C30A00F1499D /* CreateViewController.swift */,
-				0B5A06D724ED6A83004822D8 /* InputAccessoryView.swift */,
+				0BABDA2524F2AEFA00FC51BA /* Tela MyTexts */,
+				0BABDA2624F2AF1B00FC51BA /* Tela Create */,
+				0BABDA2724F2AF6200FC51BA /* Tela Dictionary */,
+				0BABDA2824F2AF7800FC51BA /* Tela Onboarding */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,12 +187,64 @@
 		0B5D861C24E6D28E00F1499D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0BABDA2924F2AFAB00FC51BA /* Api */,
+				0BABDA2A24F2AFE300FC51BA /* Data Persistence */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0BABDA2524F2AEFA00FC51BA /* Tela MyTexts */ = {
+			isa = PBXGroup;
+			children = (
+				0B5D861324E6C2DE00F1499D /* MytextsViewController.swift */,
+				0BABDA2B24F2B0BE00FC51BA /* PreviewCell.swift */,
+			);
+			path = "Tela MyTexts";
+			sourceTree = "<group>";
+		};
+		0BABDA2624F2AF1B00FC51BA /* Tela Create */ = {
+			isa = PBXGroup;
+			children = (
+				0B5D861524E6C30A00F1499D /* CreateViewController.swift */,
+				0B5A06D724ED6A83004822D8 /* InputAccessoryView.swift */,
+			);
+			path = "Tela Create";
+			sourceTree = "<group>";
+		};
+		0BABDA2724F2AF6200FC51BA /* Tela Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				0B5D861124E6C2B000F1499D /* DictionaryViewController.swift */,
+			);
+			path = "Tela Dictionary";
+			sourceTree = "<group>";
+		};
+		0BABDA2824F2AF7800FC51BA /* Tela Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0BE1EEB824F053930083F0C6 /* WelcomeViewController.swift */,
+				0BE1EEBC24F0717B0083F0C6 /* Onboarding.swift */,
+				0BA7EAE524F1791F00FD820A /* Teste.swift */,
+			);
+			path = "Tela Onboarding";
+			sourceTree = "<group>";
+		};
+		0BABDA2924F2AFAB00FC51BA /* Api */ = {
+			isa = PBXGroup;
+			children = (
 				0B5D861A24E6D27F00F1499D /* Search.swift */,
 				0BE011EB24E728560050A418 /* SearchRequest.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		0BABDA2A24F2AFE300FC51BA /* Data Persistence */ = {
+			isa = PBXGroup;
+			children = (
 				0B10E0E024EDCDA000BC950A /* Text.swift */,
 				0B10E0DE24EDC8FE00BC950A /* Storage.swift */,
 			);
-			path = Model;
+			path = "Data Persistence";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,8 +357,8 @@
 				0B3353AB24E4754400D0C522 /* Dictionary.storyboard in Resources */,
 				0B3353AF24E4784400D0C522 /* Mytexts.storyboard in Resources */,
 				0B3353B224E4882800D0C522 /* LaunchScreen.storyboard in Resources */,
+				0BE1EEBB24F056480083F0C6 /* Welcome.storyboard in Resources */,
 				0B3353AD24E4755D00D0C522 /* Profile.storyboard in Resources */,
-				0B7FF50124EB006000306895 /* PreviewTableViewCell.xib in Resources */,
 				0B3353A624E4737D00D0C522 /* Create.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,14 +404,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BE1EEC024F0A0B70083F0C6 /* CreateViewController.swift in Sources */,
 				0B5A06D924ED77F7004822D8 /* InputAccessoryView.swift in Sources */,
-				0B5D861624E6C30A00F1499D /* CreateViewController.swift in Sources */,
 				0B5D861B24E6D27F00F1499D /* Search.swift in Sources */,
 				0B5D861224E6C2B000F1499D /* DictionaryViewController.swift in Sources */,
 				0B5D861424E6C2DE00F1499D /* MytextsViewController.swift in Sources */,
+				0BABDA2C24F2B0BE00FC51BA /* PreviewCell.swift in Sources */,
 				0B33537624E4332E00D0C522 /* AppDelegate.swift in Sources */,
 				0BE011EC24E728560050A418 /* SearchRequest.swift in Sources */,
-				0B7FF50324EB0E7000306895 /* PreviewTableView.swift in Sources */,
 				0B33537824E4332E00D0C522 /* SceneDelegate.swift in Sources */,
 				0B10E0E124EDCDA000BC950A /* Text.swift in Sources */,
 				0B10E0DF24EDC8FE00BC950A /* Storage.swift in Sources */,

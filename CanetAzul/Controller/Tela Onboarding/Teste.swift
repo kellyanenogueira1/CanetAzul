@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-class TabBarController: UITabBarController{
+//class TabBarController: UITabBarController{
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
+//        //Onboarding()
 //    }
 //    
 //    override func viewDidLayoutSubviews() {
@@ -38,4 +39,4 @@ class TabBarController: UITabBarController{
 //    func setIsNotNewUser(){
 //        UserDefaults.standard.set(true, forKey: "isNewUser")
 //    }
-}
+//}

@@ -16,14 +16,22 @@ extension UITextView {
         
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let close = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(closeToolBar))
-//        let color = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(closeToolBar))
-//        let tipogra = UIBarButtonItem(title: "Close", style: .done, target: self, action: #selector(closeToolBar))
         close.tintColor = .systemOrange
         close.image = UIImage(systemName: "clear")
     
+//        let color = UIBarButtonItem(title: "Color", style: .done, target: self, action: #selector(changeColor))
+//        close.tintColor = .systemOrange
+//        close.image = UIImage(systemName: "pencil.tip.crop.circle")
+//
+//        let typography = UIBarButtonItem(title: "Letter", style: .done, target: self, action: #selector(changeLetter))
+//        close.tintColor = .systemOrange
+//        close.image = UIImage(systemName: "textformat.alt")
+       
         var items = [UIBarButtonItem]()
         items.append(flexSpace)
         items.append(close)
+//        items.append(color)
+//        items.append(typography)
         
         toolbar.items = items
         toolbar.sizeToFit()
@@ -34,6 +42,12 @@ extension UITextView {
     
     @objc func closeToolBar(){
         self.resignFirstResponder()
+    }
+    @objc func changeColor(){
+        
+    }
+    @objc func changeLetter(){
+        
     }
 
 }

@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 //Este arquivo é responsável por enviar os dados de organização dos elementos na view para a storyboard e receber os dados de texto criando um documento e salvando em formato .json
+
+protocol CreateTextVCDelegate: class {
+    func textAdd(_ text: Text)
+}
+
 class CreateViewController: UIViewController, UITextViewDelegate {
     var imageView = UIImageView()
     var textView: UITextView = {
@@ -20,6 +25,7 @@ class CreateViewController: UIViewController, UITextViewDelegate {
         textView.isScrollEnabled = true
         textView.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.light)
         textView.textColor = .blue
+        textView.layer.cornerRadius = 8
         return textView
     }()
     var titleField: UITextField = {
@@ -31,8 +37,11 @@ class CreateViewController: UIViewController, UITextViewDelegate {
         titleField.font = UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.bold)
         titleField.backgroundColor = .white
         titleField.textColor = .blue
+        titleField.layer.cornerRadius = 8
         return titleField
     }()
+    
+    weak var delegateReferenceMyTexts: CreateTextVCDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +49,7 @@ class CreateViewController: UIViewController, UITextViewDelegate {
         
         self.navigationItem.title = "Create"
         self.navigationController?.navigationBar.barTintColor = UIColor.init(red: 00, green: 36, blue: 70)
+        view.backgroundColor = .some(UIColor(red: 0.96, green: 0.79, blue: 0.44, alpha: 1.00))
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(saveText))
         //navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(backView))
@@ -58,7 +68,7 @@ class CreateViewController: UIViewController, UITextViewDelegate {
     
     func viewSettings(){
         self.view.addSubview(imageView)
-        imageView.image = UIImage(named: "teste.jpg")
+        //imageView.image = UIImage(named: "background2")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             imageView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
@@ -114,40 +124,53 @@ class CreateViewController: UIViewController, UITextViewDelegate {
         
     }
     
-    @objc func backView() {
-        //Pop-up perguntando se deseja salvar
-        //Se sim, createText()
-//        let alert = UIAlertController(title: "Attention", message: "Do you want to leave without saving?", preferredStyle: .alert)
-//        let okay = UIAlertAction(title: "Save", style: .default, handler: { action in})
-//        alert.addAction(okay)
-//        let cancel = UIAlertAction(title: "Descart changes", style: .destructive, handler: { action in })
-//        alert.addAction(cancel)
-//        
-//        DispatchQueue.main.async(execute: {
-//            self.present(alert, animated: true)
-//        })
-      
-    }
-    
     func alertSave(){
         let alert = UIAlertController(title: "Saved!", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        DispatchQueue.main.async(execute: {
+            self.present(alert, animated: true)
+        })
+        textView.text = ""
+        titleField.text = ""
+    }
+    func alertBodyText(){
+        let alert = UIAlertController(title: "Warning", message: "Please, write something in the body of your text", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in}))
         DispatchQueue.main.async(execute: {
             self.present(alert, animated: true)
         })
     }
     
+    //--------------- Funções CRUD-Controller ------------------
     @objc func saveText(){
-       let textWrite = Text(titleText: titleField.text!, textBody: textView.text)
-        let isCreated = Storage().createFile(textWrite)
-        if isCreated {
-            MytextsViewController().appendText(text: textWrite)
-            alertSave()
+        if !(textView.text == ""){
+            let textWrite = Text(titleText: titleField.text!, textBody: textView.text)
+            let isCreatedOrUpdate = Storage().createFile(textWrite)
+            if isCreatedOrUpdate {
+                delegateReferenceMyTexts?.textAdd(textWrite)
+                //navigationController?.pushViewController(delegateReferenceMyTexts!, animated: true)
+                alertSave()
+            } else {
+                print("The text cannot be created or updated")
+            }
         } else {
-            print("Texto não foi criado")
+            alertBodyText()
         }
+        
     }
-  
+    
+    func showText(_ idText: String){
+        let text = Storage().readFile(idText)
+        titleField.text = text?.titleText
+        textView.text = text?.textBody
+    }
+    
+    func editText(){
+        //Storage.updateFile(My)
+    }
+    
 }
 
 extension CreateViewController: UIActionSheetDelegate {

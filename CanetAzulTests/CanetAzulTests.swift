@@ -9,26 +9,66 @@
 import XCTest
 @testable import CanetAzul
 
-class CanetAzulTests: XCTestCase {
+class StorageTests: XCTestCase { //Nome da classe testada
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_createFile_creatingNewText_returnTrue(){ //test_nomedafuncaotestada_estadodoTeste_retornoEsperado
+        //given
+        let sut = Storage()
+        //when
+        let text = Text(titleText: "title", textBody: "Body")
+        var result = sut.createFile(text)
+        //Then
+        XCTAssertTrue(result)
+        
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_updateFile_updatingSaveText_returnTrue(){
+        //given
+        let sut = Storage()
+        //when
+        let text = Text(titleText: "title", textBody: "Body")
+        sut.createFile(text)
+        let idText = text.id
+        let result = sut.updateFile(idText)
+        //then
+        XCTAssertTrue(result)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func test_readFile_readingSavedFile_returnNotNil(){
+        //given
+        let sut = Storage()
+        //when
+        let text = Text(titleText: "title", textBody: "Body")
+        sut.createFile(text)
+        let idText = text.id
+        let result = sut.readFile(idText)
+        //then
+        XCTAssertNotNil(result)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_readAllFiles_readingAllSavedFiles_returnNotNil(){
+        //given
+        let sut = Storage()
+        //when
+        let textSaved = Text(titleText: "title", textBody: "Body")
+        sut.createFile(textSaved)
+        var texts: [Text] = []
+        texts.append(textSaved)
+        var result: [Text] = sut.readAllFiles() ?? []
+        //then
+        XCTAssertNotNil(result)
     }
-
+    
+    func test_deleteFile_deletingFile_returnTrue(){
+        //given
+        let sut = Storage()
+        //when
+        var text = Text(titleText: "title", textBody: "Body")
+        sut.createFile(text)
+        var idText = text.id
+        let result = sut.deleteFile(idText)
+        //then
+        XCTAssertTrue(result)
+    }
+    
 }

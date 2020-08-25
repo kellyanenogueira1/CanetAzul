@@ -38,14 +38,12 @@ class PreviewCell: UITableViewCell {
     
     func set(text: Text){
         imageBackground.image = UIImage(named: "Image")
-        //imageBackground.backgroundColor = UIColor(red: 0.96, green: 0.79, blue: 0.44, alpha: 1.00)
         previewTitle.text = text.titleText
         previewText.text = text.textBody
         dateCreate.text = text.dateCreate
     }
     
     func configureElements(){
-        //applyShadow()
         setImageConstraints()
         configureLabels()
         setPreviewText()
