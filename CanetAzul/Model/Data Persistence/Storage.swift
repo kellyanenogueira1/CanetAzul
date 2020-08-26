@@ -22,7 +22,7 @@ class Storage{
                         }
                         self.driveURL = tryURL
                     } catch {
-                        print("ERROR: Cannot create /Documents on iCloud \(error)")
+                        print("ERROR: Cannot create Documents on iCloud \(error)")
                     }
                 } else {
                     print("ERROR: Cannot get ubiquity container")

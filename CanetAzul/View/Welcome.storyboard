@@ -30,29 +30,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptH-Xh-faC">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dig-Tk-eg4">
+                                <rect key="frame" x="184" y="674" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="RtS-Kh-nbg">
+                                <rect key="frame" x="188" y="605" width="38" height="37"/>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6g1-RF-Qzd">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="560"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="MjT-OU-b57"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="uEh-Uf-Iii"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="ptH-Xh-faC" firstAttribute="top" secondItem="uSF-Fc-Ol3" secondAttribute="top" id="Crh-kK-wOC"/>
-                            <constraint firstItem="uSF-Fc-Ol3" firstAttribute="bottom" secondItem="ptH-Xh-faC" secondAttribute="bottom" id="QJz-hz-ZmJ"/>
-                            <constraint firstItem="uSF-Fc-Ol3" firstAttribute="trailing" secondItem="ptH-Xh-faC" secondAttribute="trailing" id="QzU-xd-zU3"/>
-                            <constraint firstItem="ptH-Xh-faC" firstAttribute="leading" secondItem="uSF-Fc-Ol3" secondAttribute="leading" id="Zx7-N1-BZZ"/>
-                            <constraint firstItem="ptH-Xh-faC" firstAttribute="top" secondItem="uSF-Fc-Ol3" secondAttribute="top" id="veK-kX-eDh"/>
+                            <constraint firstItem="dig-Tk-eg4" firstAttribute="top" secondItem="RtS-Kh-nbg" secondAttribute="bottom" constant="32" id="4tO-k4-d8G"/>
+                            <constraint firstItem="dig-Tk-eg4" firstAttribute="centerX" secondItem="uSF-Fc-Ol3" secondAttribute="centerX" id="7ht-8K-pmK"/>
+                            <constraint firstItem="uSF-Fc-Ol3" firstAttribute="bottom" secondItem="dig-Tk-eg4" secondAttribute="bottom" constant="32" id="7ju-3U-N4z"/>
+                            <constraint firstItem="RtS-Kh-nbg" firstAttribute="centerX" secondItem="uSF-Fc-Ol3" secondAttribute="centerX" id="ACQ-Vu-uSV"/>
+                            <constraint firstItem="RtS-Kh-nbg" firstAttribute="leading" secondItem="uSF-Fc-Ol3" secondAttribute="leading" constant="188" id="djq-7c-bz9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uSF-Fc-Ol3"/>
                     </view>
                     <connections>
-                        <outlet property="holderView" destination="ptH-Xh-faC" id="SyK-bO-nSv"/>
-                        <outlet property="view" destination="ptH-Xh-faC" id="H3B-gk-9DL"/>
+                        <outlet property="buttonStart" destination="dig-Tk-eg4" id="BfL-Vn-HcG"/>
+                        <outlet property="pageControl" destination="RtS-Kh-nbg" id="GXR-Pp-T8q"/>
+                        <outlet property="scrollview" destination="6g1-RF-Qzd" id="7Np-zA-n3d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Fn-qa-bgx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="762" y="-42"/>
+            <point key="canvasLocation" x="760.86956521739137" y="-42.391304347826093"/>
         </scene>
     </scenes>
 </document>

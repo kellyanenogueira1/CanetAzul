@@ -12,7 +12,7 @@
 		0B33537624E4332E00D0C522 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B33537524E4332E00D0C522 /* AppDelegate.swift */; };
 		0B33537824E4332E00D0C522 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B33537724E4332E00D0C522 /* SceneDelegate.swift */; };
 		0B33537F24E4332F00D0C522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B33537E24E4332F00D0C522 /* Assets.xcassets */; };
-		0B33538D24E4332F00D0C522 /* CanetAzulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B33538C24E4332F00D0C522 /* CanetAzulTests.swift */; };
+		0B33538D24E4332F00D0C522 /* StorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B33538C24E4332F00D0C522 /* StorageTests.swift */; };
 		0B33539824E4332F00D0C522 /* CanetAzulUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B33539724E4332F00D0C522 /* CanetAzulUITests.swift */; };
 		0B3353A624E4737D00D0C522 /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3353A524E4737D00D0C522 /* Create.storyboard */; };
 		0B3353A924E474AE00D0C522 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3353A824E474AE00D0C522 /* TabBar.storyboard */; };
@@ -20,6 +20,9 @@
 		0B3353AD24E4755D00D0C522 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3353AC24E4755D00D0C522 /* Profile.storyboard */; };
 		0B3353AF24E4784400D0C522 /* Mytexts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3353AE24E4784400D0C522 /* Mytexts.storyboard */; };
 		0B3353B224E4882800D0C522 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3353B024E4882800D0C522 /* LaunchScreen.storyboard */; };
+		0B37514624F6D834002B917D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE1EEB824F053930083F0C6 /* WelcomeViewController.swift */; };
+		0B37514724F6D834002B917D /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE1EEBC24F0717B0083F0C6 /* Onboarding.swift */; };
+		0B37514824F6D834002B917D /* Teste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA7EAE524F1791F00FD820A /* Teste.swift */; };
 		0B5A06D924ED77F7004822D8 /* InputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A06D724ED6A83004822D8 /* InputAccessoryView.swift */; };
 		0B5D861224E6C2B000F1499D /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D861124E6C2B000F1499D /* DictionaryViewController.swift */; };
 		0B5D861424E6C2DE00F1499D /* MytextsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D861324E6C2DE00F1499D /* MytextsViewController.swift */; };
@@ -55,7 +58,7 @@
 		0B33537724E4332E00D0C522 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0B33537E24E4332F00D0C522 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B33538824E4332F00D0C522 /* CanetAzulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanetAzulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B33538C24E4332F00D0C522 /* CanetAzulTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanetAzulTests.swift; sourceTree = "<group>"; };
+		0B33538C24E4332F00D0C522 /* StorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageTests.swift; sourceTree = "<group>"; };
 		0B33538E24E4332F00D0C522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B33539324E4332F00D0C522 /* CanetAzulUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CanetAzulUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B33539724E4332F00D0C522 /* CanetAzulUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanetAzulUITests.swift; sourceTree = "<group>"; };
@@ -143,7 +146,7 @@
 		0B33538B24E4332F00D0C522 /* CanetAzulTests */ = {
 			isa = PBXGroup;
 			children = (
-				0B33538C24E4332F00D0C522 /* CanetAzulTests.swift */,
+				0B33538C24E4332F00D0C522 /* StorageTests.swift */,
 				0B33538E24E4332F00D0C522 /* Info.plist */,
 			);
 			path = CanetAzulTests;
@@ -404,6 +407,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B37514624F6D834002B917D /* WelcomeViewController.swift in Sources */,
+				0B37514724F6D834002B917D /* Onboarding.swift in Sources */,
+				0B37514824F6D834002B917D /* Teste.swift in Sources */,
 				0BE1EEC024F0A0B70083F0C6 /* CreateViewController.swift in Sources */,
 				0B5A06D924ED77F7004822D8 /* InputAccessoryView.swift in Sources */,
 				0B5D861B24E6D27F00F1499D /* Search.swift in Sources */,
@@ -422,7 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B33538D24E4332F00D0C522 /* CanetAzulTests.swift in Sources */,
+				0B33538D24E4332F00D0C522 /* StorageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

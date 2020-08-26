@@ -8,24 +8,24 @@
 
 import Foundation
 import UIKit
-class Onboarding: UIViewController {
-     weak var delegateMytextsToOnboarding: MytextsViewController?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+//class Onboarding: UIViewController {
+//    //weak var delegateMytextsToOnboarding: MytextsViewController?
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
 //        if Core.shared.isNewUser(){
 //              // show onboarding
-//              //let viewcontroller = storyboard?.instantiateViewController(identifier: "welcome") as! WelcomeViewController
-//              //viewcontroller.modalPresentationStyle = .fullScreen
-//            navigationController?.present(WelcomeViewController(), animated: true)
+//              let viewcontroller = storyboard?.instantiateViewController(identifier: "welcome") as! WelcomeViewController
+//            viewcontroller.modalPresentationStyle = .fullScreen
+//            //navigationController?.present(WelcomeViewController(), animated: true)
 //        }
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
-}
-
+//    }
+//
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//    }
+//}
+//
 //class Core {
 //    static let shared = Core()
 //

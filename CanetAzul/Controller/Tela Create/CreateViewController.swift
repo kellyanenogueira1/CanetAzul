@@ -158,7 +158,6 @@ class CreateViewController: UIViewController, UITextViewDelegate {
         } else {
             alertBodyText()
         }
-        
     }
     
     func showText(_ idText: String){

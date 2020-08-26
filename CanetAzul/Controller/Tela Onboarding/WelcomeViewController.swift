@@ -9,90 +9,102 @@
 import Foundation
 import UIKit
 
-class WelcomeViewController: UIViewController{
-    @IBOutlet var holderView: UIView!
-    let imageOnboarding = UIImageView()
-    let buttonNext = UIButton()
-    let labelText = UILabel()
-    let scrollview = UIScrollView()
+class WelcomeViewController: UIViewController, UIScrollViewDelegate{
+
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var buttonStart: UIButton!
+    
+    var scrollWidth: CGFloat! = 0.0
+    var scrollHeight: CGFloat! = 0.0
+    
+    let titles = ["Feel free to explore your creativity by writing texts of your own, writing brings us many benefits.", "Need some help?"]
+    let descriptions = ["Feel free to explore your creativity by writing texts of your own, writing brings us many benefits", "Search for synonyms of a word and make your text more optimized."]
+    let imgs = ["Onboarding1", "Onboarding2"]
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+//        scrollWidth = scrollView.frame.size.width
+//        scrollHeight = scrollView.frame.size.height
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemOrange
-    }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+        //self.view.layoutIfNeeded() //to call viewDidLayoutSubviews() and get dynamic width and height of scrollview
+        scrollWidth = scrollView.frame.size.width
+        scrollHeight = scrollView.frame.size.height
+        view.backgroundColor = UIColor(red: 0.96, green: 0.79, blue: 0.44, alpha: 1.00)
+    
         configure()
-    }
-    private func configure(){
-        //set up view srollview
-        self.scrollview.frame = holderView.bounds
-        self.holderView.addSubview(scrollview)
+        var frame = CGRect(x: 0, y: 0, width: 0, height: 0)
         
-        let titles = ["Welcome! Feel free to explore your creativity by writing texts of your own, writing brings us many benefits.", "Need some help? Search for synonyms of a word and make your text more optimized."]
-        
-        for index in 1..<3 {
-            let pageView = UIView(frame: CGRect(x: CGFloat(index) * holderView.frame.size.width, y: 0, width: holderView.frame.size.width, height: holderView.frame.size.height))
-            scrollview.addSubview(pageView)
-            imageSettings()
-            labelSettings()
-            buttonSettings()
-            labelText.text = titles[index]
-            imageOnboarding.image = UIImage(named: "onboarding\(index).png")
-            buttonNext.setTitle("Next", for: .normal)
-            if index == 2 {
-                buttonNext.setTitle("Get Started", for: .normal)
-            }
-            buttonNext.tag = index+1
-            scrollview.contentSize = CGSize(width: holderView.frame.size.width*3, height: 0)
-            scrollview.isPagingEnabled = true
+        for index in 0..<titles.count {
+            frame.origin.x = scrollWidth * CGFloat(index)
+            frame.size = CGSize(width: scrollWidth, height: scrollHeight)
+
+            let slide = UIView(frame: frame)
+
+            //subviews
+            let imageView = UIImageView.init(image: UIImage.init(named: imgs[index]))
+            imageView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
+            imageView.contentMode = .scaleAspectFit
+            imageView.center = CGPoint(x: scrollWidth/2, y: scrollHeight/2 - 50)
+          
+            let txt1 = UILabel.init(frame: CGRect(x: 32, y: imageView.frame.maxY+30, width: scrollWidth-64, height: 30))
+            txt1.textAlignment = .center
+            txt1.font = UIFont.boldSystemFont(ofSize: 20.0)
+            txt1.text = titles[index]
+
+            let txt2 = UILabel.init(frame: CGRect(x: 32, y: txt1.frame.maxY+10, width: scrollWidth-64, height: 50))
+            txt2.textAlignment = .center
+            txt2.numberOfLines = 3
+            txt2.font = UIFont.systemFont(ofSize: 18.0)
+            txt2.text = descriptions[index]
+
+            slide.addSubview(imageView)
+            slide.addSubview(txt1)
+            slide.addSubview(txt2)
+            scrollView.addSubview(slide)
         }
+
+        //set width of scrollview to accomodate all the slides
+        scrollView.contentSize = CGSize(width: scrollWidth * CGFloat(titles.count), height: scrollHeight)
+
+        //disable vertical scroll/bounce
+        self.scrollView.contentSize.height = 1.0
+
+        //initial state
+        pageControl.numberOfPages = titles.count
+        pageControl.currentPage = 0
     }
     
-    func imageSettings(){
-        self.view.addSubview(imageOnboarding)
-        imageOnboarding.contentMode = .scaleAspectFit
-        imageOnboarding.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            imageOnboarding.centerYAnchor.constraint(equalTo: holderView.centerYAnchor),
-            imageOnboarding.centerXAnchor.constraint(equalTo: holderView.centerXAnchor)
-        ])
+    //indicator
+    @IBAction func pageChanged(_ sender: Any) {
+        scrollView!.scrollRectToVisible(CGRect(x: scrollWidth * CGFloat((pageControl?.currentPage)!), y: 0, width: scrollWidth, height: scrollHeight), animated: true)
+    }
+
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        setIndiactorForCurrentPage()
+    }
+
+    func setIndiactorForCurrentPage()  {
+        let page = (scrollView?.contentOffset.x)!/scrollWidth
+        pageControl?.currentPage = Int(page)
     }
     
-    func labelSettings(){
-        self.view.addSubview(labelText)
-        labelText.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-        labelText.centerXAnchor.constraint(equalTo: holderView.centerXAnchor),
-        labelText.topAnchor.constraint(equalTo: imageOnboarding.bottomAnchor, constant: 20)
-        //labelText.bottomAnchor.constraint(equalTo: holderView.bottomAnchor, constant: -10)
-        ])
-        labelText.textAlignment = .center
-        labelText.font = UIFont(name: "Helvetica-Bold", size: 32)
+    func configure(){
+        self.scrollView.delegate = self
+        scrollView.isPagingEnabled = true
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.showsVerticalScrollIndicator = false
+       
     }
     
-    func buttonSettings(){
-        self.view.addSubview(buttonNext)
-        buttonNext.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            buttonNext.centerXAnchor.constraint(equalTo: holderView.centerXAnchor),
-            //buttonNext.topAnchor.constraint(equalTo: labelText.bottomAnchor, constant: 40),
-            buttonNext.bottomAnchor.constraint(equalTo: holderView.bottomAnchor, constant: -10)
-        ])
-        buttonNext.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
-        buttonNext.setTitleColor(.white, for: .normal)
-        buttonNext.backgroundColor = .black
-    }
-    
-    @objc func didTapButton(_ button: UIButton){
-        guard button.tag < 2 else{
-            //dismiss
+    func didTapButton(_ button: UIButton){
+           // dismiss
             Core.shared.setIsNotNewUser()
             dismiss(animated: true, completion: nil)
-            return
-        }
-        //scroll to next page
-        scrollview.setContentOffset(CGPoint(x: holderView.frame.size.width * CGFloat(button.tag), y: 0), animated: true)
     }
     
 }

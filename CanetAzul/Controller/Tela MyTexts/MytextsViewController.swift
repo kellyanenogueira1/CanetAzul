@@ -87,7 +87,8 @@ extension MytextsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAtindexPath: IndexPath) {
-        self.tableView.deselectRow(at: didSelectRowAtindexPath, animated: true) //lembrar de retirar
+        self.tableView.deselectRow(at: didSelectRowAtindexPath, animated: true)
+        //lembrar de retirar
         let text = texts[didSelectRowAtindexPath.row]
         CreateViewController().showText(text.id)
     }
